@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Na-i</title>
-  <link rel="stylesheet" href="style_v6.css">
+  <link rel="stylesheet" href="style_v8.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script defer src="main.js"></script>
 </head>
@@ -12,24 +12,26 @@
 <body>
   <header class="header">
     <div class="top-row">
-      <div class="logo">
-        <img src="" alt="Logo">
-        <span>THE GIRLS POWER</span>
-      </div>
-      <div class="icons">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <i class="fa-solid fa-bars"></i>
-      </div>
+        <div class="logo">
+            <img src="image/Logo.png" alt="Logo">
+            <span>Na-i</span>
+        </div>
+        <div class="icons">
+            <i class="fa fa-search"></i>
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
     </div>
-    <nav class="menu">
-      <a href="#">About</a>
-      <a href="#">个人简介</a>
-      <a href="#">Blog</a>
+    <nav class="menu" id="menu">
+        <a href="#">About</a>
+        <a href="#">个人简介</a>
+        <a href="#">Blog</a>
     </nav>
-  </header>
+ </header>
 
   <div class="mainvisual">
-    <img src="image/MV.png" alt="Main Visual">
+    <img src="image/MV%201.png" alt="Main Visual">
   </div>
 
   <section class="about">
@@ -46,7 +48,8 @@
           この名前を選んだのは、絶えず自己を否定し再構築する勇気を持ち、無限の可能性を探求していくという願いから。<br>
           私たち8人は、それぞれの無限の旅の中で交わる一つの点。
         </p>
-        <p class="name">
+
+        <div class="name">
           Ye Qi,<br>
           Xie Qinrui,<br>
           Zhang Lu,<br>
@@ -55,7 +58,8 @@
           Xu Fengwei,<br>
           Xiong Juan,<br>
           Mei Xiaonan
-        </p>
+        <div>
+          
       </div>
     </div>
     <div class="story fade">
@@ -178,7 +182,7 @@
 
 <!-- 以下是footer -->
 
-  <div style="height: 200px;"></div>
+  <div style="height: 60px;"></div>
 
   <footer>
     <div class="overlay-image">
