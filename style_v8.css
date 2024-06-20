@@ -230,7 +230,8 @@ nav i {
 }
 
 .concept .contents p {
-    font-size: 16px;
+
+    font-size: 1ovw; 
     text-align: justify;
     line-height: 2.5rem;
 }
@@ -369,7 +370,11 @@ footer.scroll .overlay-image img {
 
 /* mobile screens */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
+    html, body {
+        overflow-x: hidden;
+    }
+
     html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
         margin: 0;
         padding: 0;
@@ -535,7 +540,7 @@ footer.scroll .overlay-image img {
         width: 100%;
         height: auto;
         display: block;
-        margin-left: 30px;
+        margin-left: 10px;
     }
 
     .about {
@@ -543,14 +548,7 @@ footer.scroll .overlay-image img {
         margin-left: 20px;
         margin-right: 20px;
         font-size: 10px;
-    }
-
-    .concept, .story {
-        flex-direction: column;
-    }
-
-    .concept .contents {
-        width: 100%;
+        overflow: hidden;
     }
 
     .concept .contents h2 {
@@ -563,10 +561,7 @@ footer.scroll .overlay-image img {
         margin-bottom: 20px;
     }
 
-    .concept .contents p {
-        font-size: 13px;
-        line-height: 2rem;
-    }
+
 
     .concept .contents .name {
         text-align: left;
@@ -628,7 +623,7 @@ footer.scroll .overlay-image img {
 
 
 /* PC端的样式 */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 993px) {
     .menu-toggle {
         display: none;
     }
