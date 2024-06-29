@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  
 const rows = document.querySelectorAll('.carousel-row');
 // 这段代码是将每一张图片克隆一份，并追加到行的末尾。这是为了实现无缝滚动。
 rows.forEach(row => {
@@ -57,9 +58,6 @@ rows.forEach(row => {
       footer.classList.remove('scroll');
     }
   });
-
-
-
 
 
 
