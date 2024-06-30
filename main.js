@@ -59,17 +59,33 @@ rows.forEach(row => {
     }
   });
 
-
-
-
-
-  // script.js
 document.addEventListener('DOMContentLoaded', function () {
   const menuToggle = document.getElementById('menu-toggle');
   const menu = document.getElementById('menu');
 
   menuToggle.addEventListener('click', function () {
-      menu.classList.toggle('active');
+    menu.classList.toggle('active');
   });
 });
 
+
+/* 点击menu的a后平滑滚动至对应的section */
+
+document.addEventListener("DOMContentLoaded", function() {
+  const menuLinks = document.querySelectorAll('.menu a');
+
+  menuLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+
+      if (targetSection) {
+        window.scrollTo({
+          top: targetSection.offsetTop,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+})

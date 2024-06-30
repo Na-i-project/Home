@@ -1,0 +1,752 @@
+@charset "UTF-8";
+
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+fieldset, img, input, button {             /*fieldset组合表单中的相关元素*/
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;                /*清除列表风格*/
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: 'optima', 'serif';
+}
+
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+/*防止多行文本框拖动*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+/*  去掉图片低测默认的3像素空白缝隙*/
+table {
+    border-collapse: collapse;            /*合并外边线*/
+}
+
+
+body {
+    font: 12px/150% 'optima', 'Arial', 'sans-serif';
+    color: #666;
+    background: #fff;
+    margin: 0;
+}
+
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; 
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+.col-red {
+    color: #C81623 !important;
+}
+
+
+
+.header {
+    background-color: #fff;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.top-row {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 0; /* 将左边距设为0 */
+    justify-content: flex-start;
+    position: absolute; /* 使用绝对定位 */
+    left: 50px; /* 根据需要调整左边距 */
+}
+
+.logo img {
+    height: 45px;
+    margin-right: 30px;
+}
+
+.icons {
+    display: flex;
+    gap: 30px;
+    padding: 10px 30px;
+}
+
+.icons i {
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+
+.icons i:hover {
+    color: #666666;
+}
+
+.menu {
+    display: flex;
+    font-size: 17px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 30px;
+    padding: 10px 10px;
+}
+
+.menu a {
+    position: relative;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 15px;
+    color: #333;
+}
+
+.menu a::after {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #000000;
+    bottom: 10px; /*アンダーラインが現れ始める位置（aタグの下辺からの高さ）*/
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.menu a:hover::after {
+    visibility: visible;
+    bottom: 2px;
+    opacity: 1;
+}
+
+.menu img {
+    height: 50px;
+    justify-content: flex-end;
+}
+
+.mainvisual {
+    position: relative;
+    margin-bottom: 60px;
+    height: 430px;
+    width: 100%;
+}
+
+.mainvisual img {
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    transition: opacity 2s ease-in-out;
+}
+
+.MV_1 {
+    opacity: 1;
+}
+
+.MV_2 {
+    opacity: 0;
+}
+
+.mainvisual:hover .MV_1 {
+    opacity: 0;
+}
+
+.mainvisual:hover .MV_2 {
+    opacity: 1;
+}
+
+.about {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.about .contents {
+    margin: 300px auto 0;
+}
+
+
+.concept .contents {
+    width: 90%;
+}
+
+.concept .contents h2 {
+    font-size: 45px;
+    margin: 30px 0;
+    font-weight: bold;
+    color: #000;
+}
+
+.concept .contents h3 {
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+
+.concept-img {
+    margin: 20px 0;
+    float: right; /* 将元素靠到右边 */
+}
+
+.concept-img img {
+    width: 100%; /* 修改图片的宽度 */
+    max-width: 290px; /* 设置图片的最大宽度 */
+    height: auto; /* 保持图片的宽高比 */
+}
+
+.concept-logo {
+    margin-top: 220px;
+}
+
+.concept-logo img {
+    width: 100%; /* 修改图片的宽度 */
+    max-width: 150px; /* 设置图片的最大宽度 */
+    height: auto; /* 保持图片的宽高比 */
+    padding-bottom: 55px;
+    padding-left: 10px;
+}
+
+
+.concept .contents p {
+    font-size: 1vw; 
+    text-align: justify;
+    line-height: 1.8rem;
+    padding-right: 350px;
+    padding-left: 35px;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", "Noto Sans", Meiryo, sans-serif;
+}
+
+.concept .contents .name {
+    line-height: 0.55rem;
+    margin: 90px 0 0 40px;
+    font-size: 1vw; 
+}
+
+.intro {
+    margin-top: 190px;
+}
+
+.intro h1 {
+    font-size: 45px;
+    text-align: left;
+    padding-left: 80px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.intro ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.intro ul li {
+    display: block;  /* 调整more的位置，让其浮动到右边，所以设定父元素为display:block */
+    width: 20%;
+    overflow: hidden;
+    margin: 20px;
+}
+
+.intro ul li img {
+    width: 100%;  /* 调整li的display为block之后，画像会变大，设置为100%以免超出边框 */
+}
+
+.intro-title {
+    text-align: justify;
+    line-height: 2.2rem;
+    font-size: 1vw;
+    font-weight: bold;
+}
+
+.intro-description{
+    text-align: justify;
+    line-height: 1.4rem;
+    font-size: 0.9vw;
+}
+
+.intro ul li a {
+    display: block;
+    float: right;
+    background-color: #666666;
+    color: aliceblue;
+    text-align: center;
+    padding: 2px;
+    width: 80px;
+    border-radius: 3px;
+    margin: 20px 0 0 0; /* 删除margin-left170px，改为float:right */
+    transition: all 0.5s; /* 增加hover的渐变动画效果 */
+}
+
+.intro ul li a:hover {  /* 增加hover的渐变动画效果 */
+    background-color: #999999;
+}
+
+
+
+/* 图片滚动 */
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 260px;
+    margin-bottom: 150px;
+}
+
+.carousel-row {
+    display: flex;
+    overflow: hidden;
+    width: auto;
+}
+
+.carousel-row img {
+    width: auto;
+    height: 200px;
+    margin-right: 20px;
+    float: none;
+}
+
+
+    /* 以下是从下往上的浮动效果 */
+
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.5s, transform 1.5s;
+}
+
+.fade.active {
+    opacity: 1;
+    transform: translateY(Opx);
+}
+
+
+
+
+           /* 以下是footer */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    position: relative;
+    height: 100vh; 
+    width: 100vw; 
+    background: url('img/home_img/Footer_1.jpg') no-repeat center center;
+    background-size: cover; 
+    overflow: hidden; 
+}
+
+/* Overlay image styles */
+.overlay-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+}
+
+.overlay-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.75s ease-in-out; 
+}
+
+footer.scroll .overlay-image img {
+    transform: translateY(-100%);
+    animation: bufferThenMove 3s ease-in-out;
+}
+
+
+
+
+/* mobile screens */
+
+@media screen and (max-width: 992px) {
+    html, body {
+        overflow-x: hidden;
+    }
+
+    html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+        margin: 0;
+        padding: 0;
+    }
+
+    fieldset, img, input, button {
+        border: none;
+        padding: 0;
+        margin: 0;
+        outline-style: none;
+    }
+
+    ul, ol {
+        list-style: none;
+    }
+
+    input {
+        padding-top: 0;
+        padding-bottom: 0;
+        font-family: "SimSun", "宋体";
+    }
+
+    select, input {
+        vertical-align: middle;
+    }
+
+    select, input, textarea {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    img {
+        border: 0;
+        vertical-align: middle;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    body {
+        font: 12px/150% Arial, sans-serif;
+        color: #666;
+        background: #fff;
+        margin: 0;
+    }
+
+    .clearfix:before, .clearfix:after {
+        content: "";
+        display: table;
+    }
+
+    .clearfix:after {
+        clear: both;
+    }
+
+    .clearfix {
+        *zoom: 1;
+    }
+
+    a {
+        color: #666;
+        text-decoration: none;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        text-decoration: none;
+        font-weight: normal;
+        font-size: 100%;
+    }
+
+    s, i, em {
+        font-style: normal;
+        text-decoration: none;
+    }
+
+    .col-red {
+        color: #C81623 !important;
+    }
+
+    .header {
+        background-color: #fff;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .top-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .brand {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        text-align: center;
+        flex: 1;
+    }
+
+    .icons {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding: 5px 10px;
+    }
+
+    .icons i {
+        font-size: 16px;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 20px;
+        background-color: #fff;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 98; /* 确保menu位于menu-toggle下方 */
+    }
+
+    .menu a {
+        font-size: 16px;
+        padding: 10px;
+        color: #333;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 99; /* 确保menu-toggle位于最上层 */
+        position: relative; /* 添加position属性，以确保z-index生效 */
+    }
+
+    .menu-toggle i {
+        font-size: 24px;
+        color: #333;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .mainvisual {
+        position: relative;
+        margin-bottom: -300px; /* 确保与下一个 section 紧密相连 */
+        /*height: auto; !* 适应内容高度 *!*/
+        width: 100%;
+    }
+
+    .mainvisual img {
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-left: 10px;
+        transition: opacity 2s ease-in-out;
+        z-index: 1; /* 确保mainvisual在z-index顺序中较低 */
+    }
+
+    .about {
+        width: 100%;
+        font-size: 10px;
+        overflow: hidden;
+        margin-top: 50px; /* 确保内容不会被覆盖，调整距离 */
+    }
+
+    .concept .contents h2 {
+        font-size: 23px;
+        margin: 10px 0;
+    }
+
+    .concept .contents h3 {
+        font-size: 15px;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 3; /* 确保标题在z-index顺序中最高 */
+    }
+
+    .concept .contents p {
+        font-size: 1.5vw;
+    }
+
+    .concept .contents .name {
+        text-align: left;
+        font-size: 12px;
+        line-height: 0.5rem;
+        margin: 20px 0 0 0;
+        padding-bottom: 30px;
+        padding-top: 10px;
+    }
+
+    .intro {
+        margin-top: 30px;
+    }
+
+    .intro h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .intro ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro ul li {
+        width: 70%;
+    }
+
+    .intro-title {
+        font-size: 2vw;
+    }
+
+    .intro-description {
+        font-size: 1.6vw;
+    }
+
+    .intro ul li a {
+        font-size: 1.6vw;
+        padding: 10px;
+    }
+
+    .carousel {
+        margin-top: 30px;
+    }
+
+    .carousel-row img {
+        width: auto;
+        height: 150px;
+    }
+
+    footer {
+        height: auto;
+        background-size: cover;
+    }
+
+    .overlay-image {
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .overlay-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+
+
+/* PC端的样式 */
+@media screen and (min-width: 993px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+        gap: 30px;
+        padding: 10px 10px;
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .menu a {
+        font-size: 16px;
+        padding: 15px;
+        color: #333;
+    }
+
+    .menu a::after {
+        position: absolute;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: #000000;
+        bottom: 10px;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+    }
+
+    .menu a:hover::after {
+        visibility: visible;
+        bottom: 2px;
+        opacity: 1;
+    }
+
+    .logo {
+        display: block;
+    }
+}
