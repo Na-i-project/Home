@@ -288,7 +288,7 @@ s, i, em {
     text-align: left;
     padding-left: 80px;
     margin-top: 20px;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
     color: #000000;
     font-weight: bold;
 }
@@ -297,8 +297,9 @@ s, i, em {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 35px;
+    margin-right: 35px;
+    gap: 15px;
 }
 
 .intro ul li {
@@ -310,6 +311,11 @@ s, i, em {
 
 .intro ul li img {
     width: 100%;  /* 调整li的display为block之后，画像会变大，设置为100%以免超出边框 */
+    opacity: 70%;
+}
+
+.intro ul li img:hover {
+    opacity: 90%;
 }
 
 .intro-title {
@@ -346,13 +352,26 @@ s, i, em {
 
 /* 图片滚动 */
 
+
 .carousel {
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    margin-top: 260px;
+    gap: 45px;
+    margin-top: 180px;
     margin-bottom: 150px;
 }
+
+
+.carousel h1 {
+    font-size: 45px;
+    text-align: left;
+    padding-left: 80px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: #000000;
+    font-weight: bold;
+}
+
 
 .carousel-row {
     display: flex;
@@ -594,7 +613,7 @@ footer.scroll .overlay-image img {
 
     .mainvisual {
         position: relative;
-        margin-bottom: -300px; /* 确保与下一个 section 紧密相连 */
+        margin-bottom: -500px; /* 确保与下一个 section 紧密相连 */
         /*height: auto; !* 适应内容高度 *!*/
         width: 100%;
     }
@@ -605,10 +624,25 @@ footer.scroll .overlay-image img {
         width: 100%;
         height: auto;
         display: block;
-        margin-left: 10px;
         transition: opacity 2s ease-in-out;
         z-index: 1; /* 确保mainvisual在z-index顺序中较低 */
     }
+
+
+    .concept-logo img {
+        width: 100%; /* 修改图片的宽度 */
+        max-width: 150px; /* 设置图片的最大宽度 */
+        height: auto; /* 保持图片的宽高比 */
+        padding-bottom: 15px;
+        padding-left: 10px;
+    }
+
+    .concept-img img {
+        width: 60%; /* 修改图片的宽度 */
+        height: auto; /* 保持图片的宽高比 */
+        margin-left: 160px;
+    }
+    
 
     .about {
         width: 100%;
@@ -618,26 +652,36 @@ footer.scroll .overlay-image img {
     }
 
     .concept .contents h2 {
-        font-size: 23px;
-        margin: 10px 0;
+        font-size: 22px;
+        margin: 10px 20px;
+
     }
 
     .concept .contents h3 {
-        font-size: 15px;
+        font-size: 11px;
         margin-bottom: 20px;
+        margin-left: 20px;
         position: relative;
         z-index: 3; /* 确保标题在z-index顺序中最高 */
     }
 
+
     .concept .contents p {
-        font-size: 1.5vw;
+        font-size: 1.7vw; 
+        text-align: justify;
+        line-height: 1.3rem;
+        padding-right: 20px;
+        padding-left: 20px;
+        font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans", "Noto Sans", Meiryo, sans-serif;
     }
+    
 
     .concept .contents .name {
         text-align: left;
-        font-size: 12px;
-        line-height: 0.5rem;
-        margin: 20px 0 0 0;
+        font-size: 9px;
+        line-height: 0.4rem;
+        margin: 30px 0 20px 20px;
         padding-bottom: 30px;
         padding-top: 10px;
     }
@@ -649,6 +693,7 @@ footer.scroll .overlay-image img {
     .intro h1 {
         font-size: 30px;
         margin-bottom: 20px;
+        padding-left: 30px;
     }
 
     .intro ul {
@@ -666,11 +711,40 @@ footer.scroll .overlay-image img {
 
     .intro-description {
         font-size: 1.6vw;
+        line-height: 1rem;
     }
 
     .intro ul li a {
         font-size: 1.6vw;
         padding: 10px;
+    }
+
+
+    .intro ul li img {
+        width: 60%;  /* 调整li的display为block之后，画像会变大，设置为100%以免超出边框 */
+        opacity: 70%;
+    }
+    
+    .intro ul li img:hover {
+        opacity: 90%;
+    }
+
+
+    .intro ul li a {
+        display: block;
+        float: right;
+        background-color: #666666;
+        color: aliceblue;
+        text-align: center;
+        padding: 2px;
+        width: 50px;
+        border-radius: 3px;
+        margin: 20px 0 0 0; /* 删除margin-left170px，改为float:right */
+        transition: all 0.5s; /* 增加hover的渐变动画效果 */
+    }
+    
+    .intro ul li a:hover {  /* 增加hover的渐变动画效果 */
+        background-color: #999999;
     }
 
     .carousel {
@@ -698,6 +772,25 @@ footer.scroll .overlay-image img {
         width: 100%;
         height: auto;
         object-fit: cover;
+    }
+
+    .carousel {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 180px;
+        margin-bottom: 20px;
+    }
+    
+    
+    .carousel h1 {
+        font-size: 30px;
+        text-align: left;
+        padding-left: 30px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        color: #000000;
+        font-weight: bold;
     }
 }
 
